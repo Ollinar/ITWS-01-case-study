@@ -51,7 +51,34 @@
       </div>
     </nav>
     
+    <h3>Input Types</h1>
 
+
+
+    <div class="example row">
+        <div class="col-6" id="codespace">
+            <form action="">
+                <div class="mb-3">
+                    <button onclick="output()" class="btn btn-primary" type="button">Run</button>
+                    <textarea id="codeinp" class="form-control" name="codearea" cols="30" rows="10"><h1>test</h1></textarea>
+        
+                </div>
+                    
+                
+                
+        
+            </form>
+        
+        </div>
+        <div class="col-6" id="codeout">
+        </div>
+    </div>
+<script>
+    function output(){
+        let codearea = document.getElementById("codeinp").value;
+        document.getElementById("codeout").innerHTML = codearea;
+    }
+</script>
 
 </body>
 
