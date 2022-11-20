@@ -52,25 +52,30 @@
     </nav>
     
     <h3>Input Types</h1>
+        
+    <p>Input tag is what really makes up the Html form. It is the part where users actually interact and input their informations.</p>
 
-
-
+    <br>
     <div class="example row">
         <div class="col-6" id="codespace">
             <form action="">
                 <div class="mb-3">
                     <button onclick="output()" class="btn btn-primary" type="button">Run</button>
-                    <textarea id="codeinp" class="form-control" name="codearea" cols="30" rows="10"><h1>test</h1></textarea>
+                    <textarea id="codeinp" class="form-control" name="codearea" cols="30" rows="10">
+                        <label for="textinp">This is the text input</label>
+                        <input type="text" name="" id="textinp">
+                        <br>
+                        <label for="numinp">This the Nubmer input</label>
+                        <input type="number" name="" id="numinp">
+                        <br>
+                        <label for="dateinp">This the Date input</label>
+                        <input type="date" name="" id="dateinp">
+                    </textarea>
         
                 </div>
-                    
-                
-                
-        
             </form>
-        
         </div>
-        <div class="col-6" id="codeout">
+        <div class="col-6" id="codeout" style="background-color: black; color:aliceblue;">
         </div>
     </div>
 <script>
