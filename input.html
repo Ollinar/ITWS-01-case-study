@@ -17,7 +17,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html">Webpage name</a>
+            <a class="navbar-brand" href="/index.html">Eychtiemel</a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,37 +51,154 @@
       </div>
     </nav>
     
-    <h3>Input Types</h1>
+    <div class="row rows-col-auto container mx-auto">
+        <h3>Input Types</h1>
         
-    <p>Input tag is what really makes up the Html form. It is the part where users actually interact and input their informations.</p>
-
+        <p>Input tag is what really makes up the Html form. It is the part where users actually interact and input their informations. There are tons of input types out there and this will only cover some of the most used ones.</p>
+        <h4>List of common input types</h4>
+        <table class="table table-striped table-hover table-dark w-75 text-center mx-auto">
+            <thead>
+                <th>Input type</th>
+                <th>Explanation</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Text</td>
+                    <td>This is the most basic input type where the user can type anything; Be it letters, numbers, or special characters.</td>
+                </tr>
+                <tr>
+                    <td>Number</td>
+                    <td>This is an input field specialized for nubmers. User would also be given inside the input box an arrow up and down to increment or decremanet the input number.</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>This is an input field specialized for dates. User would also be given a calendar to help them choose a date.</td>
+                </tr>
+                <tr>
+                    <td>Checkboxes</td>
+                    <td>This is an input type where users dont actualy type anyting and just click the checkbox or label. Checkboxes could be grouped together by putting the same name attribute on each one.</td>
+                </tr>
+                <tr>
+                    <td>Radio Buttons</td>
+                    <td>Just like checkboxes, however radio buttons can only have one selected item and must be grouped together by having the same name attribute.</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Telephone number</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Search</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Select & Option/Datalist</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Range</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>File</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Submit</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Reset</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <br>
-    <div class="example row">
+    <div class="example row container mx-auto">
         <div class="col-6" id="codespace">
             <form action="">
-                <div class="mb-3">
-                    <button onclick="output()" class="btn btn-primary" type="button">Run</button>
-                    <textarea id="codeinp" class="form-control" name="codearea" cols="30" rows="10">
-                        <label for="textinp">This is the text input</label>
-                        <input type="text" name="" id="textinp">
-                        <br>
-                        <label for="numinp">This the Nubmer input</label>
-                        <input type="number" name="" id="numinp">
-                        <br>
-                        <label for="dateinp">This the Date input</label>
-                        <input type="date" name="" id="dateinp">
-                    </textarea>
+                <div class="mb-3 container">
+                    <div class="btn-group overflow-scroll w-100">
+                        <button type="button" onclick="allinp()" class="btn btn-dark border border-light">All</button>
+                        <button type="button" onclick="textinp()" class="btn btn-dark border border-light">Text</button>
+                        <button type="button" onclick="numinp()" class="btn btn-dark border border-light">Number</button>
+                        <button type="button" onclick="dateinp()" class="btn btn-dark border border-light">Date</button>
+                        <button type="button" onclick="checkboxinp()" class="btn btn-dark border border-light">Checkboxes</button>
+                        <button type="button" onclick="radioinp()" class="btn btn-dark border border-light">Radiobuttons</button>
+                        <button type="button" onclick="emailinp()" class="btn btn-dark border border-light">Email</button>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <h4 class="col-10">Code</h4>
+                        <button onclick="output()" class="btn btn-primary w-auto" type="button">Run</button>
+                    </div>
+                    <textarea id="codeinp" class="form-control overflow-auto" name="codearea" cols="30" rows="10"></textarea>
         
                 </div>
             </form>
         </div>
-        <div class="col-6" id="codeout" style="background-color: black; color:aliceblue;">
+        <div class="col-6 overflow-auto" style="background-color: black; color:aliceblue;border:solid 1px blue;border-radius:10px;">
+            <h4>Output: </h4>
+            <div id="codeout"></div>
         </div>
     </div>
 <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+        allinp();
+    })
     function output(){
         let codearea = document.getElementById("codeinp").value;
         document.getElementById("codeout").innerHTML = codearea;
+    }
+    function allinp(){
+        document.getElementById("codeinp").value = `<!--Text Type Input-->
+        <label for="textinp">This is the text input</label>
+        <input type="text" name="" id="textinp">
+        <br>
+
+<!--Number Type Input-->
+        <label for="numinp">This the Nubmer input</label>
+        <input type="number" name="" id="numinp">
+        <br>
+
+<!--Date Type Input-->
+        <label for="dateinp">This the Date input</label>
+        <input type="date" name="" id="dateinp">`;
+        output();
+    }
+    function textinp(){
+        document.getElementById("codeinp").value = `<!--Text Type Input-->
+        <label for="textinp">This is the text input</label>
+        <input type="text" name="" id="textinp">`;
+        output();
+    }
+    function numinp(){
+        document.getElementById("codeinp").value = `<!--Number Type Input-->
+        <label for="numinp">This the Nubmer input</label>
+        <input type="number" name="" id="numinp">`;
+        output();
+    }
+    function dateinp(){
+        document.getElementById("codeinp").value = `<!--Date Type Input-->
+        <label for="dateinp">This the Date input</label>
+        <input type="date" name="" id="dateinp">`;
+        output();
     }
 </script>
 
