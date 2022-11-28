@@ -10,14 +10,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <title>Enter title here</title>
+    <title>Paragraphs</title>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html">Webpage name</a>
+            <a class="navbar-brand" href="/index.html">Eychtiemel</a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,6 +51,279 @@
       </div>
     </nav>
     
+    <div class="row rows-col-auto container mx-auto">
+        <h3>Paragraph tag</h3>
+
+            <p> 
+                    The <b><i>(p) HTML element</i></b> represents a <b><i>paragraph</i></b>. Paragraphs are usually 
+                    represented in visual media as <b><i>blocks of text</i></b> separated from adjacent 
+                    locks by blank lines and/or first-line indentation, but <b><i>HTML
+                    paragraphs</i></b> can be any structural grouping of related content, 
+                    such as images or form fields.
+            </p>
+        <h3>Html Formating Elements</h3>
+
+            <p>
+                <b>HTMl Formating Elements</b> are used to make text design in HTML like 
+                <b>Bold text (b)</b>, <i>Italic text (i)</i>, <mark>Marked text (mark)</mark>, 
+                <small>Small text (small)</small>, <del>Delete text (del)</del>, 
+                <ins>Insert text (ins)</ins> etc.
+            </p>
+
+            <table class="table table-striped table-hover table-dark w-75 text-center mx-auto">
+                <thead>
+                    <th>Paragraph and Formating Elements</th>
+                    <th>Explanation</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><h2>p<h2></td>
+                        <td>The (p) tag defines a paragraph. Browsers automatically add a single 
+                            blank line before and after each (p) element.<br><br>
+                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h2>br</h2></td>
+                        <td>The (br) HTML element produces a line break in text, (br) can break a line
+                            of sentence inside or out side the paragraph (p).<br><br>
+                           
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><h2>b</h2></td>
+                        <td>The Bold text (b) HTML Formating Element make a certain text <b>Bold</b>,
+                            usually used to emphasize something strongly in writing.<br><br>
+                           
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><h2>i</h2></td>
+                        <td>The Italic text (i) HTML Formating Element make a certain text <i>Italic</i>.
+                            Italics are used for emphasis or contrast, to draw attention to some 
+                            particular part of a text.<br><br>
+                           
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><h2>mark</h2></td>
+                        <td>The Marked text (mark) HTML Formating Element make a certain text <mark>Marked or highlighted</mark>
+                            for reference or notation purposes, due to the marked passage's relevance 
+                            or importance in the enclosing context.<br><br>
+                           
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><h2>small</h2></td>
+                        <td>The Small text (small) HTML Formating Element 
+                            used to set <small>Small</small> font size. It decreases the font size by one size.<br><br>
+            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><h2>del</h2></td>
+                        <td>The Delete text (del) HTML Formating Element make a certain text <del>Delete</del>.
+                            it is a text that has been deleted from a document. Browsers will usually strike 
+                            a line through deleted text.<br><br>
+            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><h2>ins</h2></td>
+                        <td>The Insert text (ins) HTML Formating Element make a certain text <ins>Insert</ins>.
+                            The Insert tag defines a text that has been inserted into a document. 
+                            Browsers will usually underline inserted text.<br><br>
+            
+                        </td>
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+    </div>
+    <br>
+    <div class="example row container mx-auto">
+        <div class="col-6" id="codespace">
+            <form action="">
+                <div class="mb-3 container">
+                    <div class="btn-group overflow-scroll w-100">
+                        <button type="button" onclick="allinp()" class="btn btn-dark border border-light">All</button>
+                        <button type="button" onclick="par()" class="btn btn-dark border border-light">p</button>
+                        <button type="button" onclick="brk()"
+                            class="btn btn-dark border border-light">br</button>
+                            <button type="button" onclick="bold()"
+                            class="btn btn-dark border border-light">b</button>
+                        <button type="button" onclick="italic()" class="btn btn-dark border border-light">i</button>
+                        <button type="button" onclick="marked()"
+                            class="btn btn-dark border border-light">mark</button>
+                        <button type="button" onclick="small()"
+                            class="btn btn-dark border border-light">small</button>
+                            <button type="button" onclick="del()"
+                            class="btn btn-dark border border-light">del</button>
+                        <button type="button" onclick="insert()"
+                            class="btn btn-dark border border-light">ins</button>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <h4 class="col-10">Code</h4>
+                        <button onclick="output()" class="btn btn-primary w-auto" type="button">Run</button>
+                    </div>
+                    <textarea id="codeinp" class="form-control overflow-auto" name="codearea" cols="30"
+                        rows="15"></textarea>
+   
+                </div>
+            </form>
+        </div>
+        <div class="col-6 overflow-auto"
+            style="background-color: black; color:aliceblue;border:solid 1px blue;border-radius:10px;">
+            <h4>Output: </h4>
+            <div class="overflow-auto" id="codeout"></div>
+        </div>
+    </div>
+<script>
+     document.addEventListener("DOMContentLoaded", () => {
+    allinp();
+})
+function output() {
+    let codearea = document.getElementById("codeinp").value;
+    document.getElementById("codeout").innerHTML = codearea;
+}
+function allinp() {
+    document.getElementById("codeinp").value = `<!--Paragraph <p>-->
+
+<hr>
+    <label for="p">Use of Paragraph tag</label>
+    <p style="text-align:center">
+        This is a Paragraph
+    </p>
+<hr>
+
+<!--Paragrap with the use of Break tag <br>-->
+    <label for="br">Use of Braek tag in a Paragraph</label>
+    <p style="text-align:center">
+        This is a <br> Paragraph
+    </p>
+<hr>
+
+<!--Paragrap with the use of Bold text <b>-->
+    <label for="b">Use of Bold text in a Paragraph</label>
+    <p style="text-align:center"> 
+        This is a <b>Bold text</b> in Paragraph
+    </p>
+<hr>
+
+
+<!--Paragrap with the use of Italic text <i>-->
+    <label for="i">Use of Italic text in a Paragraph</label>
+    <p style="text-align:center"> 
+        This is a <i>Italic text</i> in Paragraph
+    </p>
+<hr>
+
+
+<!--Paragrap with the use of Marked text <mark>-->
+    <label for="mark">Use of Marked text in a Paragraph</label>
+    <p style="text-align:center"> 
+        This is a <mark>Marked text</mark> in Paragraph
+    </p>
+<hr>
+
+<!--Paragrap with the use of Small text <small>-->
+    <label for="small">Use of Small text in a Paragraph</label>
+    <p style="text-align:center">
+        This is a <small>Small text</small> in Paragraph
+    </p>
+<hr>
+
+<!--Paragrap with the use of Delete text <del>-->
+    <label for="del">Use of Delete text in a Paragraph</label>
+    <p style="text-align:center"> 
+        This is a <del>Delete text</del> in Paragraph
+    </p>
+<hr>
+
+<!--Paragrap with the use of Insert text <ins>-->
+    <label for="ins">Use of Insert text in a Paragraph</label>
+    <p style="text-align:center"> 
+        This is a <ins>Insert text</ins> in Paragraph
+    </p>
+`;
+    output();
+}
+         function par() {
+    document.getElementById("codeinp").value = `<!--Paragraph <p>-->
+
+<label for="h1">Use of Paragraph tag</label>
+<p style="text-align:center">
+    This is a Paragraph
+</p>
+    `;
+    output();
+}
+function brk() {
+    document.getElementById("codeinp").value = `<!--Paragrap with the use of Break tag <br>-->
+
+<label for="h2">Use of Braek tag in a Paragraph</label>
+<p style="text-align:center">
+    This is a <br> Paragraph
+</p>`;
+    output();
+}
+function bold() {
+            document.getElementById("codeinp").value = `<!--Paragrap with the use of Bold text <b>-->
+    <label for="b">Use of Bold text in a Paragraph</label>
+    <p style="text-align:center"> 
+        This is a <b>Bold text</b> in Paragraph
+    </p>`;
+            output();
+        }
+function italic() {
+            document.getElementById("codeinp").value = `<!--Paragrap with the use of Italic text <i>-->
+    <label for="i">Use of Italic text in a Paragraph</label>
+    <p style="text-align:center"> 
+        This is a <i>Italic text</i> in Paragraph
+    </p>`;
+            output();
+        }
+function marked() {
+            document.getElementById("codeinp").value = `<!--Paragrap with the use of Marked text <mark>-->
+    <label for="mark">Use of Marked text in a Paragraph</label>
+    <p style="text-align:center"> 
+        This is a <mark>Marked text</mark> in Paragraph
+    </p>`;
+            output();
+        }
+function small() {
+            document.getElementById("codeinp").value = `<!--Paragrap with the use of Small text <small>-->
+    <label for="small">Use of Small text in a Paragraph</label>
+    <p style="text-align:center"> 
+        This is a <small>Small text</small> in Paragraph
+    </p>`;
+            output();
+        }
+function del() {
+            document.getElementById("codeinp").value = `<!--Paragrap with the use of Delete text <del>-->
+    <label for="del">Use of Delete text in a Paragraph</label>
+    <p style="text-align:center"> 
+        This is a <del>Delete text</del> in Paragraph
+    </p>`;
+            output();
+        }
+function insert() {
+            document.getElementById("codeinp").value = `<!--Paragrap with the use of Insert text <ins>-->
+    <label for="ins">Use of Insert text in a Paragraph</label>
+    <p style="text-align:center"> 
+        This is a <ins>Insert text</ins> in Paragraph
+    </p>`;
+            output();
+        }
+</script>
 
 
 </body>

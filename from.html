@@ -10,28 +10,31 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <title>Enter title here</title>
+    <title>Form</title>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html">Webpage name</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">Eychtiemel</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/index.html" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                        <a class="nav-link active" href="/index.html" aria-current="page">Home <span
+                                class="visually-hidden">(current)</span></a>
                     </li>
 
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Html Parts</a>
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Html Parts</a>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/intro.html">Introduction to HTML</a>
                             <a class="dropdown-item" href="/mainComp.html">Main components</a>
@@ -45,14 +48,135 @@
                         </div>
                     </li>
                 </ul>
-                
+
 
             </div>
-      </div>
+        </div>
     </nav>
+    <div class="row rows-col-auto container mx-auto">
+        <h3>Form Tag</h3>
+
+            <p>The easiest way to understand the form tag is to think of it as a container for all of the user input
+                that the programmer wants to submit somewhere.</p>
+            <h4>List of tags and attributes used inside form tag</h4>
+            <table class="table table-striped table-hover table-dark w-75 text-center mx-auto">
+                <thead>
+                    <th>Tag/Attributes</th>
+                    <th>Explanation</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>action</td>
+                        <td>Attribute used on the form tag to tell what webpage the form should be subbmited to.</td>
+                    </tr>
+                    <tr>
+                        <td>method</td>
+                        <td>Attribute used on the form tag to tell how the form should be submitted. there are 2 main
+                            types of method, GET and POST. GET will put all of the things to be submitted on the URL
+                            thus its limited by the URL maximum limit. Meanwhile POST method wont put the things to be
+                            submitted on the url thus its not limited and more secure for things like passwords. By defult the form will use GET.</td>
+                    </tr>
+                    <tr>
+                        <td>target</td>
+                        <td>Attribute used on the form tag to specify where should the response forom the form submition be displayed. "_blank" will open in new tab while "_self" will open it to the current tab</td>
+                    </tr>
+                    <tr>
+                        <td>Input</td>
+                        <td>Input tag is what really makes up the Html form. It is the part where users actually
+                            interact and input
+                            their informations.</td>
+                    </tr>
+                    <tr>
+                        <td>Label</td>
+                        <td>Label tag is used to label and input field so the user knows what that input is for.</td>
+                    </tr>
+                    <tr>
+                        <td>Fieldset</td>
+                        <td>Fieldse tag is used to group inputs together. For example grouping inputs about personal
+                            information together on one fieldset.</td>
+                    </tr>
+                    <tr>
+                        <td>Legend</td>
+                        <td>Legend tag is like label tag but for Fieldset. It is used to inform the user what a fieldset
+                            is for</td>
+                    </tr>
+                    <tr>
+                        <td>for</td>
+                        <td>An attribute used on a label to link it to an inuput field by using the id of that input
+                            field. If tha label is linked to an
+                            input field, when the user clicks the label it'll put the user in the linked input field.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>An attribute used on input tag to give it a name or "key name". When a for is submitted,
+                            it'll be in a format of key value pairs. The key will be what the programmer used as a name,
+                            while the value is what the user inputted.</td>
+                    </tr>
+                </tbody>
+
+            </table>
     
+                
+    </div>
+    <br>
+    <div class="example row container mx-auto">
+        <div class="col-6" id="codespace">
+            <form action="">
+                <div class="mb-3 container">
 
+                    <div class="row">
+                        <h4 class="col-10">Code</h4>
+                        <button onclick="output()" class="btn btn-primary w-auto" type="button">Run</button>
+                    </div>
+                    <textarea id="codeinp" class="form-control overflow-auto" name="codearea" cols="30"
+                        rows="15"></textarea>
 
+                        
+                </div>
+            </form>
+        </div>
+        <div class="col-6 overflow-auto"
+            style="background-color: black; color:aliceblue;border:solid 1px blue;border-radius:10px;">
+            <h4>Output: </h4>
+            <div class="overflow-auto" id="codeout"></div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            all();
+        })
+        function output() {
+            let codearea = document.getElementById("codeinp").value;
+            document.getElementById("codeout").innerHTML = codearea;
+        }
+        function all() {
+            document.getElementById("codeinp").value =`<!--form tag with action and method-->
+            <!--The input has the name "q" because thats what the google use of their search quiries-->
+            <form action="https://www.google.com/search" method="GET" target="_blank">
+                <label for="gSearch">Search in google</label>
+                <input type="text" name="q" id="gSearch">
+                <input type="submit" value="Search">
+            </form>
+            <br>
+<!--New form with no action, method and submit button just for example-->
+            <form action="" method="">
+            <fieldset>
+            <legend>This is the legend for the example fieldset</legend>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <br>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age">
+            </fieldset>
+            </form>` 
+            ;
+            output();
+        }
+        
+
+    </script>
 </body>
 
 </html>
