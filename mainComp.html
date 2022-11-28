@@ -107,66 +107,34 @@
             </table>
     </div>
     <br>
-    <div class="example row container mx-auto">
-        <div class="col-6" id="codespace">
-            <form action="">
-                <div class="mb-3 container">
-                    <div class="btn-group overflow-scroll w-100">
-                        <button type="button" onclick="allinp()" class="btn btn-dark border border-light">Simple Code</button>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <h4 class="col-10">Code</h4>
-                        <button onclick="output()" class="btn btn-primary w-auto" type="button">Run</button>
-                    </div>
-                    <textarea id="codeinp" class="form-control overflow-auto" name="codearea" cols="30"
-                        rows="15"></textarea>
 
-                        
-                </div>
-            </form>
-        </div>
-        <div class="col-6 overflow-auto"
-            style="background-color: black; color:aliceblue;border:solid 1px blue;border-radius:10px;">
-            <h4>Output: </h4>
-            <div class="overflow-auto" id="codeout"></div>
-        </div>
+<div class="row rows-col-auto container mx-auto">
+      <h3>Sample Program</h3>  
+    <p style="text j"> 
+        This sample program show how to use the <b><i>2 main components</i></b> of a
+        html program: html and body. Notice that the input header (h1)"My First Heading"
+        can be seen at the output with a large font size and a paragraph (p) "My First paragraph"
+        Notice that the head and title are not declare at the sample code thats why "index.html"
+        is the default output shown on the right side. 
+    </p>
+        <h1 style="text-align:center">Example Program : </h1>
     </div>
-<script>
-     document.addEventListener("DOMContentLoaded", () => {
-    allinp();
-})
-function output() {
-    let codearea = document.getElementById("codeinp").value;
-    document.getElementById("codeout").innerHTML = codearea;
-}
-function allinp() {
-    document.getElementById("codeinp").value = `<hr>
-    <!--This is html Tag (<html></html>)-->
-    <html>
-
-<!--This is head Tag (<head></head>)-->
-    <head>
-
-<!--This is title Tag (<title></title>) title tag can't be seen because there is no tab-->
-            <title>This is a title</title>
-
-        <style>
-        h6 {text-align:center;color:maroon}
-        h2 {text-align:center;color:green}
-        </style>
-    </head>
-
-<!--This is body Tag (<body></body>)-->
-        <body>
-            <h2>Using style in head tag can affect the input inside the body Like this header</h2>
-            <h6>This is a simple program inside the bodys</h6>
-        </body>
-</html>
-`;
-    output();
-}
-    output();
-</script>
+<center>
+    <img src="images/code.png" alt="html code" width="620" height="499"></a>
+    <img src="images/simple.png" alt="html output" width="620" height="499"></a>
+<br><br>
+</center>
+<div class="row rows-col-auto container mx-auto">
+    <h3>Sample Program</h3>  
+  <p style="text j"> 
+      In this second example the <b><i>4 main elements</i></b> are declare by using the title tag
+      the tab/bar at the top right change into <b><i>"Page Title Name"</i></b> and different type 
+      of headers inside the body tag are use to input text into the webpage. 
+  </p>
+        <h1 style="text-align: center">Another Example : </h1>
+  </div>
+<center>
+    <img src="images/iocode.jpg" alt="html code" width="1000" height="499"></a>
+</center>>
 </body>
 </html>
