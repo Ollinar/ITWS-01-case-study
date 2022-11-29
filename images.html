@@ -50,29 +50,98 @@
             </div>
       </div>
     </nav>
-    <h1>The img element</h1>
-<div class="row ">
-<div class="col-6 w-50">
+<div class="container">
+    <h2> Images</h2>
+    <p class="fw-bold fst-italic ">
+         in order for webpages to be more exppresive, programmers could put images on their webpages.
+    </p>
 
-  <h2> Image TAG </h2>
-<p class="fw-bold fst-italic ">
-    The <img> tag is used to embed an image in an HTML page. Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image. The <img> tag has two required attributes: src - Specifies the path to the image.
-</p>  
+<table class="table table-striped table-hover table-dark w-75 text-center mx-auto">
+    <thead>
+        <th>
+            Tag/Attributes
+        </th>
+        <th>
+            Explanation
+        </th>
+    </thead>
+    <tbody>
+        <tr>
+        <td>
+            Img Tag
+        </td>
+        <td>
+            The "< img>" tag is used to embed an image in an HTML page. Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image.
+        </td>
+        </tr>
+        <tr>
+            <td>
+                src attribute
+            </td>
+            <td>The src attributes specifies the path to the image. It could either be Relative path or Absolute. it coud also be a link to an img on the wab.</td>
+        </tr>
+        <tr>
+            <td>alt Attribute</td>
+            <td>alt attribute is used to describe what the picture is incase the image didn't load properly. it also helps with things like page reader.</td>
+        </tr>
+        <tr>
+            <td>
+                width Attribute
+            </td>
+            <td>Width attribute is used to specify teh widhth of an image. Although CSS could also modify the width of an image.</td>
+        </tr>
+        <tr>
+            <td>height Attribute</td>
+            <td>The height attribute is used to specify the height of an image. Although CSS could also modify the height of an image.</td>
+        </tr>
+    </tbody>
+</table>
 </div>
-<div class="col-6">
-    <div class="text-end">
-    <img src="images/jacket.jpeg" style="width: 250px;" class="rounded float-right" alt="Boy in the jacket">
-</div>
-</div>
+<br>
+    <div class="example row container mx-auto">
+        <div class="col-6" id="codespace">
+            <form action="">
+                <div class="mb-3 container">
+                    <div class="row">
+                        <h4 class="col-10">Code</h4>
+                        <button onclick="output()" class="btn btn-primary w-auto" type="button">Run</button>
+                    </div>
+                    <textarea id="codeinp" class="form-control overflow-auto" name="codearea" cols="30"
+                        rows="15"></textarea>
 
- 
- </div>
-</div>
-<h3> Images source</h3>
+                        
+                </div>
+            </form>
+        </div>
+        <div class="col-6 overflow-auto container"
+            style="background-color: black; color:aliceblue;border:solid 1px blue;border-radius:10px;">
+            <h4>Output: </h4>
+            <div class="overflow-auto" id="codeout"></div>
+        </div>
+    </div>
 
-<div>
-    
-</div>
+  
+  <script>
+      
+       document.addEventListener("DOMContentLoaded", () => {
+            all();
+        })
+        function output() {
+            let codearea = document.getElementById("codeinp").value;
+            document.getElementById("codeout").innerHTML = codearea;
+        }
+        function all() {
+            document.getElementById("codeinp").value = `    <!--This is an example of image with relative path-->
+    <h3>This si an image With relative path</h3>
+    <img src="images/jacket.jpeg" alt="Boy in the jacket" width="350px" height="500px">
+
+        <!--This is an example of image with URL as Source-->
+    <h3>This is an image with URL as path</h3>
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/26907595_115184562626950_5872757978344605862_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2uRXy82z2lUAX8jsPhH&_nc_ht=scontent.fceb6-1.fna&oh=00_AfAJJnADTHHn6qpF1BNxQef6BC3wXgFl9B3PryupQzyFYQ&oe=63AD112C">
+`;
+        output();
+        }
+  </script>
 
 </body>
 
