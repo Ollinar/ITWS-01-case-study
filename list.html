@@ -10,14 +10,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <title>Enter title here</title>
+    <title>List</title>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html">Webpage name</a>
+            <a class="navbar-brand" href="/index.html">Eychtiemel</a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,8 +51,145 @@
       </div>
     </nav>
     
+	<div class="row rows-col-auto container mx-auto">
+  
+          <h3>Type of Lists</h3>
+          <p>Lists are used to group together related pieces of information so they are clearly associated with each other and easy to read. In modern web development, lists are workhorse elements, frequently used for navigation as well as general content.</p>
+           
+             <h4>3 Different Types of List</h4>
+            <table class="table table-striped table-hover table-dark w-75 text-center mx-auto">
+                <thead>
+                    <th>Lists</th>
+                    <th>Explanation</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ordered List</td>
+                        <td>An ordered list starts with the "ol" tag. Each list item starts with the "li" tag.The list items will be marked with numbers by default.</td>
+                    </tr>
+                    <tr>
+                        <td>Unordered List</td>
+                        <td>An unordered list starts with the "ul" tag.The list items will be marked with bullets (small black circles) by default.</td>
+                    </tr>
+                    <tr>
+                        <td>Description List</td>
+                        <td>HTML also supports description lists. A description list is a list of terms, with a description of each term. The "dl" tag defines the description list, the "dt" tag defines the term (name), and the "dd" tag describes each term:</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    <br>
+    <div class="example row container mx-auto">
+         <div class="col-6" id="codespace">
+            <form action="">
+                <div class="mb-3 container">
+                    <div class="btn-group overflow-scroll w-100">
+                        <button type="button" onclick="allinp()" class="btn btn-dark border border-light">All</button>
+                        <button type="button" onclick="ol()"
+  						    class="btn btn-dark border border-light">Ordered Lists</button>
+                        <button type="button" onclick="ul()"
+                            class="btn btn-dark border border-light">Unordered Lists</button>
+                        <button type="button" onclick="dl()" 
+						     class="btn btn-dark border border-light">Description Lists</button>
+                          
+						  
+						  <div class="row">
+                        <h4 class="col-10">Code</h4>
+                        <button onclick="output()" class="btn btn-primary w-auto" type="button">Run</button>
+                    </div>
+                    <textarea id="codeinp" class="form-control overflow-auto" name="codearea" cols="30"
+                        rows="15"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="col-6 overflow-auto"
+            style="background-color: black; color:aliceblue;border:solid 1px blue;border-radius:10px;">
+            <h4>Output: </h4>
+            <div class="overflow-auto" id="codeout"></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            allinp();
+        })
+        function output() {
+            let codearea = document.getElementById("codeinp").value;
+            document.getElementById("codeout").innerHTML = codearea;
+        }
+        function allinp() {
+            document.getElementById("codeinp").value = `<!--Ordered List-->
+        <label for="ol">This is an ordered list:</label>
+        <ol name="ordered" id="ol">
+           <li>Coffee</li>
+           <li>Tea</li>
+           <li>Milk</li>
+           <li>Fruit Juice</li>
+           <li>Cola</li>
+        </ol>
+ <!--Unordered Lists-->    
+        <label for="ul">This is an unordered list:</label>
+        <ul name="unordered" id="ul">
+           <li>Banana</li>
+           <li>Kiwi</li>
+           <li>Cherry</li>
+           <li>Lemon</li>
+           <li>Apple</li>
+        </ul>
+ <!--Description Lists-->       
+        <label for="dl">This is a description list</label>
+           <dl name="description" id="dl">
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+           </dl>`;
+         output();
+		 }
+        function ol() {
+            document.getElementById("codeinp").value = `<!--Ordered List Sample -->
+        <label for="ordered">This is an ordered list:</label>
+        <ol name="ordered" id="ol">
+           <li>Coffee</li>
+           <li>Tea</li>
+           <li>Milk</li>
+           <li>Fruit Juice</li>
+           <li>Cola</li>
+        </ol>`;
+            output();
+        }
+        function ul() {
+            document.getElementById("codeinp").value =`<!--Unordered List Sample-->
+        <label for="unordered">This is an unordered list:</label>
+        <ul name="unordered" id="ul">
+           <li>Banana</li>
+           <li>Kiwi</li>
+           <li>Cherry</li>
+           <li>Lemon</li>
+           <li>Apple</li>
+        </ul>`;
+            output();
+        }
+        function dl() {
+            document.getElementById("codeinp").value = `<!--Description List Sample-->
+        <label for="description">This is a description list</label>
+           <dl name="description" id="dl">
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+           </dl>`;
+            output();
+        
+        }
+    </script>
 
 
+
+    <hr>
+    <div class="container-fluid text-end">
+        <a href="/div.html"><button type="button" class="btn btn-dark">Next Topic --></button></a>
+        <br>
+    </div>
 </body>
 
 </html>
